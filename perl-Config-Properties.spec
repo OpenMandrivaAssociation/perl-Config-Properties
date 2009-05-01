@@ -1,6 +1,6 @@
 
 %define realname   Config-Properties
-%define version    1.69
+%define version    1.70
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
