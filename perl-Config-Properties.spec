@@ -1,23 +1,21 @@
+%define upstream_name    Config-Properties
+%define upstream_version 1.70
 
-%define realname   Config-Properties
-%define version    1.70
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    Configuration using Java style properties
-Source:     http://www.cpan.org/modules/by-module/Config/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Config/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(File::Temp)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Text::Wrap)
-
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 
@@ -34,7 +32,7 @@ Lines that begin with either a hash (#) or a bang (!) are considered
 comment lines and ignored.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -55,6 +53,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README Changes META.yml
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
-
