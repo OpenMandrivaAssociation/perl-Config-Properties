@@ -1,9 +1,9 @@
 %define upstream_name    Config-Properties
-%define upstream_version 1.71
+%define upstream_version 1.72
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Configuration using Java style properties
 License:    GPL+ or Artistic
