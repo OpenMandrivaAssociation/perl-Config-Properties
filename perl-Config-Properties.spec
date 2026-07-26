@@ -1,16 +1,14 @@
 %define upstream_name    Config-Properties
-%define upstream_version 1.80
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.80
+Release:	2
 
 Summary:	Configuration using Java style properties
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/salva/p5-Config-Properties
-Source0:	https://cpan.metacpan.org/authors/id/S/SA/SALVA/Config-Properties-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/S/SA/SALVA/Config-Properties-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -33,7 +31,7 @@ Lines that begin with either a hash (#) or a bang (!) are considered
 comment lines and ignored.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
