@@ -1,14 +1,15 @@
 %define upstream_name    Config-Properties
+%define upstream_version 1.80
 Name:		perl-%{upstream_name}
 Version:	1.80
-Release:	2
+Release:	1
 
 Summary:	Configuration using Java style properties
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/salva/p5-Config-Properties
-Source0:	https://cpan.metacpan.org/authors/id/S/SA/SALVA/Config-Properties-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/S/SA/SALVA/Config-Properties-1.80.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
